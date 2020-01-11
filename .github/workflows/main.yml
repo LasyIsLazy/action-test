@@ -1,0 +1,22 @@
+name: Auto Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '10.x'
+      - name: Build
+        run: npm install && npm run build
+        env:
+          TEST_1: ${{ secrets.TEST_1 }}
+          TEST_2: ${{ secrets.TEST_2 }}
+          TEST_3: test3
