@@ -20,3 +20,9 @@ jobs:
           TEST_1: ${{ secrets.TEST_1 }}
           TEST_2: ${{ secrets.TEST_2 }}
           TEST_3: test3
+      - name: sh
+        run: ./test.sh
+        env:
+          TEST_1: ${{ secrets.TEST_1 }}
+          TEST_2: ${{ secrets.TEST_2 }}
+          TEST_3: test3

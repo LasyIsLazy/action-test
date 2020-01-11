@@ -1,5 +1,5 @@
 console.log(`============`);
 console.log(process.env);
-console.log(TEST_1);
-console.log(TEST_2);
-console.log(TEST_3);
+console.log(process.env.TEST_1);
+console.log(process.env.TEST_2);
+console.log(process.env.TEST_3);
